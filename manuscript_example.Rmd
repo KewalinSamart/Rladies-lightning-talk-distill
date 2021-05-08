@@ -21,13 +21,9 @@ author:
   url: https://jravilab.github.io
 date: '2021-05-03'
 output:
-  html: distill::distill_article
-  pdf_document:
-    template: null
-  html_document:
-    df_print: paged
-  word_document:
-    reference_docx: refs/word-styles-reference-01.docx
+  distill::distill_article:
+    toc: true
+    theme: theme.css
 graphics: yes
 font-family: Helvetica
 images: data/figures

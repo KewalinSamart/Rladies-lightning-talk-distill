@@ -67,12 +67,32 @@ devtools::install_github("rstudio/distill")
 library(distill)
 ```
 
+## Creating a distill article
+
+Via R Studio IDE: File > New File > R Markdown
+
+```{r echo=FALSE, fig.width=12, fig.height=9, out.width="45%"}
+knitr::include_graphics(here::here("data/figures/creating_distill.png"))
+```
+
+Using command lines:
+```{r, eval=FALSE, echo=TRUE}
+create_article("article.Rmd")
+```
+
+## Distill .Rmd file components
+
+```{r echo=FALSE, fig.width=12, fig.height=9, out.width="100%"}
+knitr::include_graphics(here::here("data/figures/distill_component.png"))
+```
+
 ## Distill .Rmd file components (1)
 
 - YAML (Header)
   - Authors' info
   - Output formats
-  - Style settings
+  - Adding table of content
+  - Style and theme settings
   - Adding a BibTeX file for references
   - Creating automatic citation boxes
 
