@@ -1,0 +1,105 @@
+---
+title: "Distill-flavoured R Markdown for Scientific Manuscripts"
+author: "Kewalin Samart"
+date: "5/9/2021"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Overview
+
+- What is Distill R Markdown?
+- How to write scientific manuscripts using Distill R Markdown?
+- How to publish finished articles using GitHub?
+
+```{r echo=FALSE, fig.width=12, fig.height=9, out.width="20%"}
+knitr::include_graphics(here::here("Desktop/distill.png"))
+```
+```{r echo=FALSE, fig.width=12, fig.height=9, out.width="20%"}
+knitr::include_graphics(here::here("Desktop/rmarkdown.png"))
+```
+
+## Distill R Markdown
+
+- An R Markdown template designed for scientific papers
+- Best suited for technical and scientific presentations
+- Functionalities to insert:
+  - author information
+  * text
+  * tables
+  * figures
+  * references
+  * mathematical symbols or equations (with LaTeX implementation)
+  * etc.
+
+## Get Started with Distill
+### Installation:
+
+- Install the released version of distill from CRAN:
+```{r, simple, eval=FALSE, echo=TRUE}
+install.packages("distill")
+```
+
+- Or install the development version from GitHub with:
+```{r, eval=FALSE, echo=TRUE}
+install.packages("devtools")
+devtools::install_github("rstudio/distill")
+```
+
+### Loading package:
+```{r, eval=FALSE, echo=TRUE}
+library(distill)
+```
+
+## YAML (Header) 
+
+- Basic Authors' Info 
+```{r, eval=FALSE, echo=TRUE}
+---
+title: "Manuscript Title"
+description: description of the manuscript
+author:
+- name: Kewalin Samart
+  affiliation: Mathematics, Michigan State University
+  affiliation_url: https://github.com/JRaviLab
+  orcid_id: XXXX-XXXX-XXXX-XXXX
+  url: https://github.com/KewalinSamart
+date: 'YYYY-MM-DD'
+```
+
+## YAML (Header) - cont.1
+
+- Output Formats
+```{r, eval=FALSE, echo=TRUE}
+output:
+  html: distill::distill_article
+  pdf_document:
+    template: null
+  html_document:
+    df_print: paged
+  word_document:
+    reference_docx: refs/word-styles-reference-01.docx
+```
+
+## YAML (Header) - cont.2 
+
+- Styles, References, Citation
+```{r, eval=FALSE, echo=TRUE}
+graphics: yes
+font-family: Helvetica
+images: path/to/images
+bibliography: refs/connectivity_score_review.bib (path/to/bibtexfile)
+csl: refs/briefings-in-bioinformatics.csl (path/to/cslfile)
+biblio-style: apa
+---
+```
+
+
+## Resources
+
+- Webpage: https://rstudio.github.io/distill/
+- GitHub: https://github.com/rstudio/distill
+- Package Documentation: https://cran.r-project.org/web/packages/distill/distill.pdf
