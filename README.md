@@ -8,4 +8,4 @@ Distill-flavoured R Markdown for Scientific Manuscripts by Kewalin Samart
 ## Example manuscript:
 - Rmd: `manuscript_example.Rmd`
 - HTML: `manuscript_example.html`
-- Live Doc (published vis GitHub Page): https://kewalinsamart.github.io/Rladies-lightning-talk-distill/
+- Live Doc (published via GitHub Page): https://kewalinsamart.github.io/Rladies-lightning-talk-distill/
