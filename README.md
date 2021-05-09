@@ -1,5 +1,5 @@
 # Rladies-lightning-talk-distill
-## R-Ladies Pune - May 9$^{th}$, 2021
+**R-Ladies Pune - May 9, 2021**
 Distill-flavoured R Markdown for Scientific Manuscripts by Kewalin Samart
 
 ## Presentation slides:
