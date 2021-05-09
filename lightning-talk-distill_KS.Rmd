@@ -145,16 +145,17 @@ knitr::include_graphics(here::here("data/figures/in-text_citation_example.png"))
 
 # Demo Time ~
 
-## Publishing Finished Article
+## Publishing Finished Article {.smaller}
 
 - Put everything into a public GitHub repository
   - Rename the `article.html` -> `index.html`
+  - Create an empty file namely `.nojekyll` to ignore `jekyll` themes by GitHub Page and render the file in `Distill` format
   
 ```{r echo=FALSE, fig.width=12, fig.height=9, out.width="100%"}
 knitr::include_graphics(here::here("data/figures/get_repo_ready.png"))
 ```  
 
-## Publishing Finished Article
+## Publishing Finished Article {.smaller}
 
 - Set up GitHub Page
   - Setting > Page 
