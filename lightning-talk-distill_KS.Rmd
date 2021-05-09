@@ -1,0 +1,167 @@
+---
+title: "Distill-flavoured R Markdown for Scientific Manuscripts"
+author: "Kewalin Samart"
+date: "5/9/2021"
+output: 
+  ioslides_presentation:
+    template: quarterly-report.html
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Overview
+
+- What is Distill R Markdown?
+- How to write scientific manuscripts using Distill R Markdown?
+- How to publish finished articles using GitHub?
+
+```{r echo=FALSE, fig.width=12, fig.height=9, out.width="20%"}
+knitr::include_graphics(here::here("data/figures/distill.png"))
+```
+```{r echo=FALSE, fig.width=12, fig.height=9, out.width="20%"}
+knitr::include_graphics(here::here("data/figures/rmarkdown.png"))
+```
+
+## R Markdown
+
+- A framework for creating fully reproducible dynamic documents in R in multiple formats such as 
+  - Word
+  - PDF
+  - HTML
+  
+### Installation
+- Install from CRAN with:
+```{r, simple, eval=FALSE, echo=TRUE}
+install.packages("rmarkdown")
+```
+
+## Distill R Markdown
+
+- An R Markdown template designed for scientific papers
+- Best suited for technical and scientific presentations
+- Functionalities to insert:
+  - author information
+  * text
+  * tables
+  * figures
+  * references
+  * mathematical symbols or equations (using LaTeX) 
+  * ... and more!
+
+# Let's take a look at my manuscript! :)
+
+
+## Get Started with Distill
+### Installation:
+
+- Install the released version of distill from CRAN:
+```{r, eval=FALSE, echo=TRUE}
+install.packages("distill")
+```
+
+- Or install the development version from GitHub with:
+```{r, eval=FALSE, echo=TRUE}
+install.packages("devtools")
+devtools::install_github("rstudio/distill")
+```
+
+### Loading package:
+```{r, eval=FALSE, echo=TRUE}
+library(distill)
+```
+
+## Creating a Distill article
+
+Via RStudio IDE: File > New File > R Markdown
+
+```{r echo=FALSE, fig.width=12, fig.height=9, out.width="45%"}
+knitr::include_graphics(here::here("data/figures/creating_distill.png"))
+```
+
+Using command line:
+```{r, eval=FALSE, echo=TRUE}
+create_article("article.Rmd")
+```
+
+## Distill .Rmd file components
+
+```{r echo=FALSE, fig.width=12, fig.height=9, out.width="110%"}
+knitr::include_graphics(here::here("data/figures/distill_component.png"))
+```
+
+  
+## Images and Tables
+
+```{r echo=FALSE, fig.width=12, fig.height=9, out.width="105%"}
+knitr::include_graphics(here::here("data/figures/image_inserting.png"))
+```  
+
+```{r echo=FALSE, fig.width=12, fig.height=9, out.width="105%"}
+knitr::include_graphics(here::here("data/figures/table_example.png"))
+```  
+
+## Mathematical Equations/Symbols
+
+```{r echo=FALSE, fig.width=12, fig.height=9, out.width="100%"}
+knitr::include_graphics(here::here("data/figures/equation_example.png"))
+```  
+
+- LaTeX writing format
+- https://www.caam.rice.edu/~heinken/latex/symbols.pdf
+
+## Inserting References
+
+- Get bibtex file 
+  - a text file with `bib` extension  containing bibtex citations
+  - can be generated manually or automatically created using Zotero, PubMed
+  
+```{r echo=FALSE, fig.width=12, fig.height=9, out.width="20%"}
+knitr::include_graphics(here::here("data/figures/zotero_logo.png"))
+```  
+```{r echo=FALSE, fig.width=12, fig.height=9, out.width="40%"}
+knitr::include_graphics(here::here("data/figures/pubmed_logo.png"))
+```  
+
+## Inserting References
+
+```{r echo=FALSE, fig.width=12, fig.height=9, out.width="100%"}
+knitr::include_graphics(here::here("data/figures/bibtex_example.png"))
+```  
+  
+## Inserting References
+
+- Specify path to the bibtex file in YAML
+```{r, eval=FALSE, echo=TRUE}
+bibliography: refs/bibtex.bib
+```
+
+- Use `@citekey` to insert in-text citation
+
+```{r echo=FALSE, fig.width=12, fig.height=9, out.width="100%"}
+knitr::include_graphics(here::here("data/figures/in-text_citation_example.png"))
+```  
+
+# Demo Time ~
+
+## Resources {.smaller}
+
+Learn more about `Distill`:
+
+- Webpage: https://rstudio.github.io/distill/
+- GitHub: https://github.com/rstudio/distill
+
+Links to my work:
+
+- Live Doc: https://jravilab.github.io/connectivity_scores
+- GitHub Repo: https://github.com/jravilab/connectivity_scores
+- PDF: https://arxiv.org/pdf/2009.09317
+
+Presentation materials: 
+
+- GitHub: @KewalinSamart
+  - https://github.com/KewalinSamart/Rladies-lightning-talk-distill
+  
+<br>
+<p style="text-align: right;"> **Thank you** :) </p>
