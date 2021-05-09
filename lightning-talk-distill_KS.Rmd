@@ -145,6 +145,24 @@ knitr::include_graphics(here::here("data/figures/in-text_citation_example.png"))
 
 # Demo Time ~
 
+## Publishing Finished Article
+
+- Put everything into a public GitHub repository
+  - Rename the `article.html` -> `index.html`
+  
+```{r echo=FALSE, fig.width=12, fig.height=9, out.width="100%"}
+knitr::include_graphics(here::here("data/figures/get_repo_ready.png"))
+```  
+
+## Publishing Finished Article
+
+- Set up GitHub Page
+  - Setting > Page 
+  
+```{r echo=FALSE, fig.width=12, fig.height=9, out.width="100%"}
+knitr::include_graphics(here::here("data/figures/github_page_setting.png"))
+```  
+
 ## Resources {.smaller}
 
 Learn more about `Distill`:
