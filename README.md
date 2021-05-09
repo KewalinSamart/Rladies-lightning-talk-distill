@@ -1,5 +1,4 @@
-# R-Ladies Pune Lightning Talk
-**May 9, 2021**
+# R-Ladies Pune Lightning Talk 05-09-2021
 <br> Distill-flavoured R Markdown for Scientific Manuscripts by Kewalin Samart
 
 ## Presentation slides:
